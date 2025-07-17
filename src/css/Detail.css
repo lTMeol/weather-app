@@ -1,0 +1,118 @@
+/* Toàn trang */
+.detail-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* Thanh điều hướng */
+.detail-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-nav h1 {
+  font-size: 24px;
+}
+
+.detail-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-nav li {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.detail-nav li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.detail-nav .active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Nội dung chính */
+.detail-content {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.detail-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.detail-header button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.detail-header button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Card từng ngày */
+.detail-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.detail-card:hover {
+  transform: scale(1.02);
+}
+
+.detail-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.detail-info p {
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+/* Ảnh thời tiết */
+.detail-card img {
+  width: 80px;
+  height: 80px;
+}

@@ -1,0 +1,151 @@
+/* Nền toàn trang */
+.history-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  color: #1f2937;
+  font-family: "Segoe UI", sans-serif;
+  padding: 24px;
+}
+
+/* Thanh điều hướng */
+.history-nav {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 16px 24px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.history-nav h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.history-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.history-nav li {
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.history-nav li:hover {
+  opacity: 0.8;
+}
+
+.history-nav .underline {
+  text-decoration: underline;
+}
+
+/* Tiêu đề và nút clear */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.history-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+
+.clear-btn {
+  background-color: #ef4444;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clear-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Lưới card */
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Card từng thành phố */
+.history-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+
+.history-card:hover {
+  transform: translateY(-4px);
+}
+
+.history-card .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.history-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.history-card .temp-icon {
+  text-align: right;
+}
+
+.history-card .temp-icon p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.history-card img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.history-card .date {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.view-btn {
+  background-color: #3b82f6;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #2563eb;
+}
