@@ -29,7 +29,6 @@ const History = () => {
     <h1>🌤️ Weather Forecast</h1>
     <ul>
       <li onClick={() => navigate("/")}>Home</li>
-      <li onClick={() => navigate("/detail")}>Detail</li>
       <li className="underline">History</li>
     </ul>
   </nav>

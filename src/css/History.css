@@ -1,7 +1,7 @@
 /* Nền toàn trang */
 .history-container {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  background: #4facfe;
   color: #1f2937;
   font-family: "Segoe UI", sans-serif;
   padding: 24px;
@@ -9,7 +9,7 @@
 
 /* Thanh điều hướng */
 .history-nav {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: #4A90E2;
   backdrop-filter: blur(10px);
   padding: 16px 24px;
   border-radius: 12px;
@@ -80,7 +80,7 @@
 /* Lưới card */
 .history-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
   gap: 20px;
 }
 

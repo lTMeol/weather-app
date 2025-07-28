@@ -54,9 +54,8 @@ const Home = () => {
       <nav className="nav-bar">
         <h1>Weather Forecast</h1>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/detail">Detail</Link></li>
-          <li><Link to="/history">History</Link></li>
+          <li onClick={() => navigate("/")}>Home</li>
+          <li onClick={() => navigate("/history")}>History</li>
         </ul>
       </nav>
 
