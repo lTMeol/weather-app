@@ -96,10 +96,12 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #dddddd;
+  font-size: 30px;
 }
 
 .weather-card h2 {
   margin-bottom: 8px;
+  font-size: 40px;
 }
 
 .weather-card .description {
@@ -116,7 +118,7 @@ body {
 
 .weather-card .extra {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
+  font-size: 24px;
 }
 
 .weather-icon {

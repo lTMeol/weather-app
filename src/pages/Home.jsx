@@ -25,6 +25,7 @@ const Home = () => {
         return {
           time: `${hours}h`,
           temp: Math.round(entry.main.temp),
+          humidity: entry.main.humidity,
         };
       });
       setChartData(hourlyData);
@@ -105,20 +106,54 @@ const Home = () => {
         </div>
       )}
 
-      {/* Chart */}
-      {chartData.length > 0 && (
-        <div className="chart-card">
-          <h3>Temperature Forecast</h3>
-          <ResponsiveContainer width="100%" height={200}>
-            <LineChart data={chartData}>
-              <XAxis dataKey="time" stroke="#fff" />
-              <YAxis stroke="#fff" />
-              <Tooltip />
-              <Line type="monotone" dataKey="temp" stroke="#fff" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
-      )}
+{chartData.length > 0 && (
+  <div className="chart-card">
+    <h3>Temperature & Humidity Forecast</h3>
+    <ResponsiveContainer width="100%" height={250}>
+      <LineChart data={chartData}>
+        <XAxis dataKey="time" stroke="#fff" />
+        <YAxis stroke="#fff" />
+        <Tooltip
+          contentStyle={{
+            backgroundColor: "#333",
+            border: "none",
+            borderRadius: "10px",
+            color: "#fff",
+          }}
+          formatter={(value, name) => {
+            const label = name === "temp" ? "Nhiệt độ" : "Độ ẩm";
+            const unit = name === "temp" ? "°C" : "%";
+            return [`${value}${unit}`, label];
+          }}
+        />
+
+        {/* Đường nhiệt độ */}
+        <Line
+          type="monotone"
+          dataKey="temp"
+          stroke="#ffffff"
+          strokeWidth={3}
+          dot={{ r: 4, stroke: '#fff', strokeWidth: 2, fill: '#00c6ff' }}
+          activeDot={{ r: 6 }}
+          name="Nhiệt độ"
+        />
+
+        {/* Đường độ ẩm */}
+        <Line
+          type="monotone"
+          dataKey="humidity"
+          stroke="#00ff99"
+          strokeWidth={2}
+          dot={{ r: 3, fill: '#00ff99' }}
+          activeDot={{ r: 5 }}
+          name="Độ ẩm"
+        />
+      </LineChart>
+    </ResponsiveContainer>
+  </div>
+)}
+
+
     </div>
   );
 };
