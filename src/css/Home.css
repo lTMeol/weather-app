@@ -27,6 +27,7 @@ body {
   width: 70%;
   margin: 0 auto 30px;
   height: 50px;
+  flex-wrap: wrap;
 }
 
 .nav-bar ul {
@@ -35,6 +36,7 @@ body {
   gap: 20px;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
 }
 
 .nav-bar li {
@@ -48,6 +50,15 @@ body {
 .nav-bar li:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+.nav-bar .active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 
 /* Search bar */
 .search-bar {
@@ -70,9 +81,6 @@ body {
   color: white;
   font-size: 16px;
   padding: 8px 0;
-  /* ::placeholder {
-    color: rgba(255, 255, 255, 0.05);
-  } */
 }
 
 .search-bar button {
@@ -97,6 +105,8 @@ body {
   align-items: center;
   color: #dddddd;
   font-size: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .weather-card h2 {
@@ -122,8 +132,8 @@ body {
 }
 
 .weather-icon {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 
 /* Chart card */
@@ -135,7 +145,8 @@ body {
   border-radius: 20px;
   padding: 20px 30px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-   height: 300px;
+  height: 300px;
+  overflow-x: auto;
 }
 
 .chart-card h3 {
@@ -154,4 +165,79 @@ body {
 }
 .detail-button:hover {
   background-color: #0077cc;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .nav-bar {
+    width: 90%;
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .weather-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .weather-icon {
+    width: 200px;
+    height: 200px;
+  }
+
+  .chart-card {
+    padding: 15px;
+  }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .search-bar button {
+    font-size: 18px;
+  }
+
+  .weather-card {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .weather-card h2 {
+    font-size: 28px;
+  }
+
+  .weather-card .temp {
+    font-size: 36px;
+  }
+
+  .weather-card .extra {
+    font-size: 18px;
+  }
+
+  .weather-icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  .chart-card {
+    height: auto;
+  }
+
+  .detail-button {
+    width: 100%;
+    text-align: center;
+  }
 }

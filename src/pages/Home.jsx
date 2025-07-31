@@ -55,7 +55,7 @@ const Home = () => {
       <nav className="nav-bar">
         <h1>Weather Forecast</h1>
         <ul>
-          <li onClick={() => navigate("/")}>Home</li>
+          <li className="active" onClick={() => navigate("/")}>Home</li>
           <li onClick={() => navigate("/history")}>History</li>
         </ul>
       </nav>
@@ -120,13 +120,13 @@ const Home = () => {
             borderRadius: "10px",
             color: "#fff",
           }}
-          formatter={(value, name) => {
-            const label = name === "temp" ? "Nhiệt độ" : "Độ ẩm";
-            const unit = name === "temp" ? "°C" : "%";
+          formatter={(value, name, props) => {
+            const key = props.dataKey;
+            const label = key === "temp" ? "Nhiệt độ" : "Độ ẩm";
+            const unit = key === "temp" ? "°C" : "%";
             return [`${value}${unit}`, label];
           }}
         />
-
         {/* Đường nhiệt độ */}
         <Line
           type="monotone"
@@ -137,7 +137,6 @@ const Home = () => {
           activeDot={{ r: 6 }}
           name="Nhiệt độ"
         />
-
         {/* Đường độ ẩm */}
         <Line
           type="monotone"

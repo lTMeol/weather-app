@@ -19,6 +19,8 @@
   align-items: center;
   margin-bottom: 32px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .history-nav h1 {
@@ -32,6 +34,7 @@
   gap: 24px;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .history-nav li {
@@ -45,8 +48,13 @@
 }
 
 .history-nav .underline {
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3); 
+  border-radius: 6px;
+  padding: 4px 8px;
 }
+
 
 /* Tiêu đề và nút clear */
 .history-header {
@@ -54,6 +62,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .history-header h2 {
@@ -80,7 +90,7 @@
 /* Lưới card */
 .history-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -105,6 +115,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .history-card h3 {
@@ -148,4 +160,69 @@
 
 .view-btn:hover {
   background-color: #2563eb;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .history-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .history-container {
+    padding: 16px;
+  }
+
+  .history-nav {
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+
+  .history-nav h1 {
+    font-size: 18px;
+  }
+
+  .history-nav ul {
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .history-header h2 {
+    font-size: 20px;
+  }
+
+  .clear-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .history-card h3 {
+    font-size: 16px;
+  }
+
+  .history-card .temp-icon p {
+    font-size: 18px;
+  }
+
+  .view-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
 }
